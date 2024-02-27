@@ -7,5 +7,3 @@ Developed by Florian Dedov from Acid Jelly (c) 2024
 ## Examples of How To Use (Zero Alpha Version)
 
 Call Rockman using python rockman
-
-Check out: https://www.youtube.com/c/NeuralNine
