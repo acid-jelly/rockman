@@ -1,0 +1,9 @@
+dist/
+render/
+__pycache__
+*.mp4
+!sample.mp4
+*.egg-info
+*.blend
+build/
+.pypirc

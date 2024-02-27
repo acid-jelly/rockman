@@ -1,0 +1,34 @@
+import type {
+    Get[[CAPITAL_MODEL_NAME]]Params,
+    Get[[CAPITAL_MODEL_NAME]]Response,
+} from '@/models';
+import { [[LOWER_API_NAME]]Api } from './[[CAPITAL_API_NAME]]Api';
+
+const [[LOWER_MODEL_NAME]]Api = [[LOWER_API_NAME]]Api.injectEndpoints({
+    endpoints: (build) => ({
+        getPuntozUserMovements: build.query<
+            Get[[CAPITAL_MODEL_NAME]]Response,
+            Get[[CAPITAL_MODEL_NAME]]Params
+        >({
+            query: ({
+                baseUrl,
+                // [[INPUT_LABEL]]
+                startDate,
+                endDate,
+            }) => ({
+                url: `${baseUrl}/[[LOWER_API_NAME]]`,
+                method: 'GET',
+                params: {
+                    [[INPUT_LABEL]]: `${[[INPUT_LABEL]]}`,
+                    startDate,
+                    endDate,
+                },
+            }),
+        }),
+    }),
+});
+
+export const {
+    useGet[[CAPITAL_MODEL_NAME]]Query,
+    useLazyGet[[CAPITAL_MODEL_NAME]]Query,
+} = puntozUserMovementsApi;
