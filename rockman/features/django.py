@@ -27,6 +27,8 @@ class Django:
                 self.choice()
 
         elif self.current_choice == "add_method":
+            if self.python_helper is None:
+                self.python_helper = PythonHelper()
             self.console.print("___________________________")
             self.console.print("Creating new django end point method")
             decision = self.console.get_inputs(['yes','no', 'exit'], 'decision', 'Do you want to add the default methods?')
