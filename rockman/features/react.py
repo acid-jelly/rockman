@@ -11,7 +11,7 @@ class React:
 
     def choice(self):
         if self.redux_helper is None:
-                self.redux_helper = ReduxHelper()
+            self.redux_helper = ReduxHelper()
 
         if self.current_choice == 'init':
             self.console.print("___________________________")

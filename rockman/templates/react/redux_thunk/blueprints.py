@@ -1,7 +1,7 @@
 
 action_template = """
 import { Dispatch } from 'redux';
-import { {model_name_capitalize}ActionTypes, {model_name_capitalize}Request, {model_name_capitalize}Response } from '../types/{model_name}_types';
+import { {model_name_capitalize}ActionTypes, {model_name_capitalize}Request, {model_name_capitalize}Response, {model_name_capitalize}Error } from '../types/{model_name}_types';
 import axios, { AxiosError, AxiosResponse } from "axios";
 axios.defaults.withCredentials = true;
 // [ANCHOR_1]
@@ -76,7 +76,6 @@ export const START_LOADING = 'START_LOADING';
 export const END_LOADING = 'END_LOADING';
 // [ANCHOR_1]
 
-// [ANCHOR_2]
 interface StartLoadingAction {
 type: typeof START_LOADING;
 payload: {model_name_capitalize}Request;
@@ -86,6 +85,7 @@ interface EndLoadingAction {
 type: typeof END_LOADING;
 payload: {model_name_capitalize}Request;
 }
+// [ANCHOR_2]
 
 export type {model_name_capitalize}ActionTypes = 
 StartLoadingAction

@@ -30,11 +30,14 @@ class PythonHelper:
             self.methods = methods.split(",")
         print("--------------------------------------------")
         print("Creating new django end point methods")
+        print("\n")
         print(self.methods)
+        print("\n")
         app_dir = os.path.join(APPS_DIR, self.app_name)
         if not os.path.exists(app_dir):
             print("--------------------------------------------")
             print("The app does not exist")
+            print("\n")
             return
         
         for directory in self.structure:

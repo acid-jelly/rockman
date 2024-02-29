@@ -27,8 +27,10 @@ class ReduxHelper:
     def add_method(self):
         text = f"Enter the names of the method to add separated by comma use this format ITEM1|ITEM2,UPLOAD|UPLOAD,CUSTOM|POST the first item is the name of the method and the second is the http method :"
         if self.default == False or len(self.methods) == 0:
+            self.methods = []
+            self.http_methods = []
             methods = input(text)
-            methods.split(",")
+            methods = methods.split(",")
             for method in methods:
                 insider = method.split("|")
                 self.methods.append(insider[0])

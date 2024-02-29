@@ -1,6 +1,7 @@
 from rockman.features.react import React
 from rockman.features.django import Django
 from rockman.util.console import Console
+from rockman.util.cover import Cover
 
 
 class Rockman:
@@ -50,8 +51,8 @@ class Rockman:
             self.next_list()
     
     def start_session(self):
-        self.console.print("Hi")
-        self.console.print("What do you want to do?")
+        cover = Cover()
+        cover.cover()
         self.list_first_choices()
         self.next_list()
 

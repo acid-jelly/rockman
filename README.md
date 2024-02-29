@@ -1,9 +1,17 @@
 # rockman
 
-Under construction! Not ready for use yet! Currently experimenting and planning!
+Under construction! Please share your templates to this project
 
-Developed by Florian Dedov from Acid Jelly (c) 2024
+Developed by Acid Jelly (c) 2024
 
 ## Examples of How To Use (Zero Alpha Version)
 
-Call Rockman using python rockman
+Call Rockman using 'python rockman'
+
+see our youtube tutorial
+
+call the Rockman class and get fun too
+
+you can check our tutorial
+
+https://youtu.be/wxwj8aPVJIQ

@@ -6,7 +6,6 @@ export const {method_name_upper}_FAIL = '{method_name_upper}_FAIL';
 """
 
 default_type_template_anchor_2 = """
-// [ANCHOR_2]
 interface {model_name_capitalize}{method_name_capitalize}Action {
 type: typeof {method_name_upper};
 payload: {model_name_capitalize}Response;
@@ -19,6 +18,7 @@ interface {model_name_capitalize}{method_name_capitalize}ErrorAction {
 type: typeof {method_name_upper}_FAIL;
 payload: {model_name_capitalize}Error;
 }
+// [ANCHOR_2]
 """
 
 default_type_template_anchor_3 = """

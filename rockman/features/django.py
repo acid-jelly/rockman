@@ -17,13 +17,11 @@ class Django:
             self.python_helper.init()
             decision = self.console.get_inputs(['yes','no', 'exit'], 'decision', 'Do you want to add the default methods?')
             if decision == 'yes':
-                self.current_choice = 'add_method'
                 self.python_helper.default = True
-                self.choice()
+                self.python_helper.add_method()
             elif decision == 'no':
                 self.python_helper.default = False
-                self.current_choice = 'add_method'
-                self.choice()
+                self.python_helper.add_method()
             elif decision == 'exit':
                 self.current_choice = 'end'
                 self.choice()
@@ -33,13 +31,11 @@ class Django:
             self.console.print("Creating new django end point method")
             decision = self.console.get_inputs(['yes','no', 'exit'], 'decision', 'Do you want to add the default methods?')
             if decision == 'yes':
-                self.current_choice = 'add_method'
                 self.python_helper.default = True
-                self.choice()
+                self.python_helper.add_method()
             elif decision == 'no':
                 self.python_helper.default = False
-                self.current_choice = 'add_method'
-                self.choice()
+                self.python_helper.add_method()
             elif decision == 'exit':
                 self.current_choice = 'end'
                 self.choice()
