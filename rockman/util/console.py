@@ -5,16 +5,15 @@ class Console:
     def get_input(self, input_name):
         return typer.prompt(f"Enter {input_name}:")
         
-    def get_inputs(self, choices):
+    def get_inputs(self, choices, title, message):
         questions = [
-        inquirer.List('size',
-                        message="What size do you need?",
+        inquirer.List(title,
+                        message=message,
                         choices=choices,
                     ),
         ]
         answers = inquirer.prompt(questions)
-
-        return answers
+        return answers[title]
     
     def print(self, message):
         typer.echo(message)
@@ -23,8 +22,3 @@ class Console:
         choices.append('back')
         choices.append('end')
         return choices
-
-console = Console()
-
-choices = ['service', 'inject endpoint']
-inputs = console.get_inputs(choices)

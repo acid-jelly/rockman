@@ -7,9 +7,9 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 DESCRIPTION = 'automatic code generator using python'
-LONG_DESCRIPTION = "long description of the package"
+LONG_DESCRIPTION = "we try to help developers to generate code automatically using python and pass more time in the important things likes their dogs or cats."
 
 # Setting up
 setup(
@@ -21,7 +21,7 @@ setup(
     long_description_content_type="text/markdown",  # Specify Markdown content type
     long_description=long_description,
     packages=find_packages(),
-    install_requires=[],
+    install_requires=['typer','inquirer'],
     keywords=['python', 'react', 'django', 'redux', 'generator', 'code'],
     classifiers=[
         "Development Status :: 1 - Planning",
@@ -30,5 +30,10 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    entry_points={
+        'console_scripts': [
+            'rockman = rockman:main'
+        ]
+    }
 )

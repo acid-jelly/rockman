@@ -1,16 +1,19 @@
 class TextGenerator:
-    def __init__(self, input_string):
+    def __init__(self, input_string = ""):
         self.input_string = input_string
 
     def convert_string(self):
         uppercase = self.input_string.upper()
         lowercase = self.input_string.lower()
-        capital_case = self.input_string.capitalize()
-        capital_case_starting_lowercase = self.input_string.title()
+        capital_case = self.input_string.split('_')
+        capital_case = " ".join(capital_case).title()
+        capital_case = capital_case.replace(" ", "")
+        capital_case_starting_lowercase = capital_case[0].lower() + capital_case[1:]
+        plural_lower = self.change_to_plural(lowercase)
+        plural_upper = self.change_to_plural(uppercase)
 
-        return uppercase, lowercase, capital_case, capital_case_starting_lowercase
+        return uppercase, lowercase, capital_case, capital_case_starting_lowercase, plural_lower, plural_upper
     
-
     def change_to_plural(self, word):
         word = word.lower()
         if word.endswith("y"):

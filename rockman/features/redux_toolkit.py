@@ -2,9 +2,9 @@ from rockman.util.console import Console
 
 
 class ReduxToolkit:
-    def __init__(self,model_name,api_name):
-        self.model_name = model_name
-        self.api_name = api_name
+    def __init__(self):
+        self.model_name = ""
+        self.api_name = ""
         self.result_string = ""
         self.console = Console()
         self.current_choice = ""
@@ -13,12 +13,13 @@ class ReduxToolkit:
         pass
 
     def choice(self):
+        print(self.current_choice)
         if self.current_choice == 'api':
-            self.console.print("Creating api")
             self.console.print("___________________________")
+            self.console.print("Creating api")
         elif self.current_choice == "endpoint":
-            self.console.print("Creating api")
             self.console.print("___________________________")
+            self.console.print("Creating api")
         elif self.current_choice == "end":
             pass
         elif self.current_choice == "back":
@@ -31,6 +32,7 @@ class ReduxToolkit:
     def list_first_choices(self):
         choices = self.console.add_default_choices(['api', 'endpoint'])
         self.current_choice = self.console.get_inputs(choices)
+        pass
     
     def list_second_choices(self):
         choices = self.console.add_default_choices(['restart', 'end'])
