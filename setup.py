@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 DESCRIPTION = 'automatic code generator using python'
 LONG_DESCRIPTION = "we try to help developers to generate code automatically using python and pass more time in the important things likes their dogs or cats."
 
@@ -15,7 +15,7 @@ LONG_DESCRIPTION = "we try to help developers to generate code automatically usi
 setup(
     name="rockman",
     version=VERSION,
-    author="Jorge Hospinal Flores (Acid Jelly)",
+    author="Acid Jelly",
     author_email="jhospinal@acidjelly.com",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",  # Specify Markdown content type
