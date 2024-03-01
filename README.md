@@ -6,7 +6,7 @@ Developed by Acid Jelly (c) 2024
 
 ## Examples of How To Use (Zero Alpha Version)
 
-Call Rockman using 'python rockman'
+Call Rockman using 'rockman'
 
 see our youtube tutorial
 

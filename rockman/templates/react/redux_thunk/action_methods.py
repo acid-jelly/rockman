@@ -15,8 +15,7 @@ export const {model_name_capitalize}{method_name_capitalize} =
       formData.append("files", file);
     });
 
-    axios
-      .post(`${process.env.REACT_APP_API_URL}{prefix}{enpoint_name}/{model_name_for_url}/`, formData, {
+    axios.post(`${process.env.REACT_APP_API_URL}{prefix}{enpoint_name}/{model_name_for_url}/`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -69,8 +68,7 @@ export const {model_name_capitalize}{method_name_capitalize} =
       payload: { ...data, error: null, message: "START_LOADING" },
     });
 
-    axios
-      axios.get(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}?id=${data.fk_id}&name=${data.name}`)
+    axios.get(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}?id=${data.fk_id}&name=${data.name}`)
       .then((response: AxiosResponse<{model_name_capitalize}Response>) => {
         dispatch({ type: "{method_name_upper}", payload: response.data });
 
@@ -117,8 +115,8 @@ export const {model_name_capitalize}{method_name_capitalize} =
       payload: { ...data, error: null, message: "START_LOADING" },
     });
 
-    axios
-      axios.post(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}/`, data)
+    
+    axios.post(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}/`, data)
       .then((response: AxiosResponse<{model_name_capitalize}Response>) => {
         dispatch({ type: "{method_name_upper}", payload: response.data });
 
@@ -165,8 +163,7 @@ export const {model_name_capitalize}{method_name_capitalize} =
       payload: { ...data, error: null, message: "START_LOADING" },
     });
 
-    axios
-      axios.get(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}?id=${data.fk_id}&name=${data.name}`)
+    axios.get(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}?id=${data.fk_id}&name=${data.name}`)
       .then((response: AxiosResponse<{model_name_capitalize}Response>) => {
         dispatch({ type: "{method_name_upper}", payload: response.data });
 
@@ -213,8 +210,7 @@ export const {model_name_capitalize}{method_name_capitalize} =
       payload: { ...data, error: null, message: "START_LOADING" },
     });
 
-    axios
-      axios.put(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}/`, data)
+    axios.put(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}/`, data)
       .then((response: AxiosResponse<{model_name_capitalize}Response>) => {
         dispatch({ type: "{method_name_upper}", payload: response.data });
 
@@ -260,8 +256,7 @@ export const {model_name_capitalize}{method_name_capitalize} =
       payload: { ...data, error: null, message: "START_LOADING" },
     });
 
-    axios
-      axios.delete(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}?id=${data.fk_id}&name=${data.name}`)
+    axios.delete(`${process.env.REACT_APP_API_URL}{prefix}{api_name}/{model_name_url}?id=${data.fk_id}&name=${data.name}`)
       .then((response: AxiosResponse<{model_name_capitalize}Response>) => {
         dispatch({ type: "{method_name_upper}", payload: response.data });
 
